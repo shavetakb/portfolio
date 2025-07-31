@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Shaveta</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#soft-skills">Soft Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="section home">
+    <div class="about-img">
+      <img src="images/image.jpeg" alt="Shaveta's Photo" />
+    </div>
+    <h1>Hi, I'm <span>Shaveta</span></h1>
+    <p>Frontend Developer | Python Enthusiast | Lifelong Learner</p>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Hello! I'm a passionate web developer with strong skills in HTML, CSS, JavaScript, Python, and more. I love turning ideas into real-life applications and crafting user-friendly interfaces.</p>
+        <p>I am currently pursuing my MCA and exploring modern technologies like machine learning and web frameworks. I'm excited to grow as a developer and collaborate on impactful projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="section skills-section">
+    <h2>Technical Skills</h2>
+    <div class="skills-box">
+      <div class="skill-card"><i class="fas fa-code"></i> HTML, CSS, JavaScript</div>
+      <div class="skill-card"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+      <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-card"><i class="fas fa-database"></i> MySQL</div>
+      <div class="skill-card"><i class="fas fa-chart-bar"></i> Data Analysis</div>
+      <div class="skill-card"><i class="fas fa-terminal"></i> Streamlit</div>
+    </div>
+  </section>
+
+  <!-- Soft Skills Section -->
+  <section id="soft-skills" class="section skills-section">
+    <h2>Soft Skills</h2>
+    <div class="skills-box">
+      <div class="skill-card"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+      <div class="skill-card"><i class="fas fa-people-group"></i> Team Work</div>
+      <div class="skill-card"><i class="fas fa-fire"></i> Passionate</div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education-section">
+    <h2>Education</h2>
+    <div class="education-box">
+      <div class="education-card">
+        <h3>MCA - Master of Computer Applications</h3>
+        <p>MRSPTU</p>
+        <span>2023 – Present</span>
+      </div>
+      <div class="education-card">
+        <h3>BCA - Bachelor of Computer Applications</h3>
+        <p>DAV College, Abohar</p>
+        <span>2020 – 2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <i class="fas fa-heartbeat fa-2x project-icon"></i>
+        <h3 class="project-heading">
+          <a href="https://medical-diagnosis-ai-model.streamlit.app/">Disease Predictor</a>
+        </h3>
+        <p>An AI-based health diagnosis tool using Streamlit, joblib, and ML models to predict disease probability.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-calculator fa-2x project-icon"></i>
+        <h3 class="project-heading">
+          <a href="https://github.com/shavetakb?tab=repositories">Advanced Calculator</a>
+        </h3>
+        <p>Multi-functional calculator built with Python and Tkinter supporting scientific operations, history logs, and user-friendly GUI.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-wallet fa-2x project-icon"></i>
+        <h3 class="project-heading">
+          <a href="https://github.com/shavetakb?tab=repositories">Expense Tracker</a>
+        </h3>
+        <p>Personal finance tracker with pie charts and analytics using Streamlit and Pandas for expense insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>Email</p>
+        <span>shavetakamboj128@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <p>LinkedIn</p>
+        <a href="https://www.linkedin.com/in/shaveta-kamboj-5281b2287" target="_blank">Shaveta Kamboj</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p>Phone</p>
+        <span>+91 7087180429</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shaveta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
